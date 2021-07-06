@@ -2,7 +2,7 @@
 std::random_device rd;
 std::mt19937 gen1(rd());
 
-uint32_t mostFrequent(std::vector<std::vector<uint32_t>> v)
+uint32_t mostFrequent(std::vector<std::vector<uint32_t>> &v)
 {
     if (!v.size())
     {
@@ -24,7 +24,7 @@ uint32_t mostFrequent(std::vector<std::vector<uint32_t>> v)
 
     return most_freq_int->first;
 }
-uint32_t random_coordinate(uint32_t max)
+uint32_t random_coordinate(uint32_t max) // max - max random int
 {
     return (gen1() % max);
 }
